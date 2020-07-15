@@ -2,6 +2,7 @@ package com.example.android.navigation
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -37,6 +38,14 @@ class TitleFragment : Fragment() {
 
         binding.playButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+        }
+
+        binding.rulesButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
+        }
+
+        binding.aboutButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_titleFragment_to_aboutFragment)
         }
 
         setHasOptionsMenu(true)
